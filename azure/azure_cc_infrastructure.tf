@@ -1,6 +1,8 @@
 # Ensure that you are logged into the Azure CLI prior to running this.
-# Demo tags on all the elements that will accept them
-# This is 100% unofficial and not supported by Rubrik
+# Incase it's not obvious, anything that has "CHANGEME" in the name needs
+# needs to be changed. 
+# Demo tags on all the elements that will accept them.
+# This is 100% unofficial and not supported by Rubrik.
 
 # Configure the Azure Provider
 provider "azurerm" {
