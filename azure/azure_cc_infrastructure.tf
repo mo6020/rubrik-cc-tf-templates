@@ -1,3 +1,7 @@
+# Ensure that you are logged into the Azure CLI prior to running this.
+# Demo tags on all the elements that will accept them
+# This is 100% unofficial and not supported by Rubrik
+
 # Configure the Azure Provider
 provider "azurerm" {
   # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
@@ -33,6 +37,8 @@ resource "azurerm_virtual_network" "CHANGEME-vnet-name" {
 # Create network security group for external access to CC
 # Not required but eases access during the bootstrap process
 # YMMV depending on security constraints/concerns
+# I typically just grant SSH and HTTPS access from my IP address
+# during the bootstrap/config process
 resource "azurerm_network_security_group" "CHANGEME-nsg-name" {
   name                = "CHANGEME-nsg-name"
   resource_group_name = azurerm_resource_group.CHANGEME-rg-name.name
